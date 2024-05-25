@@ -1,18 +1,8 @@
-
-.logo > img {
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 20px;
-}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -29,68 +19,85 @@ header {
 }
 
 #header-img {
-    height: 50px;
+    height: 100px; /* Increased height for the logo */
+    width: auto; /* Maintain aspect ratio */
 }
 
 #nav-bar {
     display: flex;
     gap: 20px;
+    text-align: center;
+
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-}
+    }
 
 .nav-link:hover {
     text-decoration: underline;
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 120px; /* Increased to accommodate larger logo */
 }
 
 section {
-    padding: 40px 20px;
+    padding: 20px;
+    margin: 20px;
 }
 
-form {
+.feature, .pricing-plan {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 20px 0;
+}
+
+#video {
+    width: 100%;
+    height: 315px;
+}
+
+#form-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 #email {
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 300px;
+    max-width: 100%;
 }
 
 #submit {
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-#submit:hover {
-    background-color: #555;
-}
-
-/* Media Query */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     #nav-bar {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 }
+.pricing-plan {
+    width: 300px; /* Adjust the width as needed */
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
